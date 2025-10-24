@@ -22,6 +22,12 @@ A Node.js application that converts CSV files to JSON and stores the data in Pos
 - npm or yarn
 
 
+### Setup Environment Variables
+
+Copy `.env.example` to `.env`:
+so it can run correctly
+
+
 ## Usage
 
 ### Start the application
