@@ -7,31 +7,13 @@ A Node.js application that converts CSV files to JSON and stores the data in Pos
 - **Custom CSV Parser**: Built from scratch without external CSV parsing libraries
 - **Streaming Architecture**: Memory-efficient processing using Node.js streams and readline
 - **Batch Processing**: Processes records in configurable batches (default 1000 records)
-- **Large File Support**: Optimized to handle 50,000+ records without memory issues
+- **Large File Support**: Available to handle 50,000+ records without memory issues
 - **Nested Property Support**: Handles complex properties with dot notation (e.g., `name.firstName`, `address.line1`)
 - **PostgreSQL Integration**: Stores data with proper schema mapping and connection pooling
 - **Age Distribution Analysis**: Automatically calculates and displays age group statistics
 - **RESTful API**: Express-based API with pagination support
 - **Production Ready**: Error handling, logging, and graceful shutdown
 
-## Project Structure
-
-```
-csv-to-json-api/
-├── src/
-│   ├── config/
-│   │   └── database.js          # Database configuration and initialization
-│   ├── services/
-│   │   └── userService.js       # User data operations
-│   ├── utils/
-│   │   └── csvParser.js         # Custom CSV parser
-│   └── index.js                 # Main application entry point
-├── data/
-│   └── users.csv                # Sample CSV file
-├── .env                         # Environment configuration
-├── package.json
-└── README.md
-```
 
 ## Prerequisites
 
@@ -39,41 +21,6 @@ csv-to-json-api/
 - PostgreSQL (v12 or higher)
 - npm or yarn
 
-## Installation
-
-1. **Clone the repository**
-   ```bash
-   git clone <repository-url>
-   cd csv-to-json-api
-   ```
-
-2. **Install dependencies**
-   ```bash
-   npm install
-   ```
-
-3. **Set up PostgreSQL database**
-   ```sql
-   CREATE DATABASE csv_converter_db;
-   ```
-
-4. **Configure environment variables**
-   
-   Update the `.env` file with your database credentials:
-   ```env
-   PORT=3000
-   DB_HOST=localhost
-   DB_PORT=5432
-   DB_NAME=csv_converter_db
-   DB_USER=postgres
-   DB_PASSWORD=yourpassword
-   CSV_FILE_PATH=./data/users.csv
-   BATCH_SIZE=1000
-   ```
-
-5. **Prepare your CSV file**
-   
-   Place your CSV file in the `data/` directory or update `CSV_FILE_PATH` in `.env`
 
 ## Usage
 
@@ -195,7 +142,7 @@ CREATE TABLE public.users (
 - Streaming for memory-efficient large file handling
 - Transaction management for data consistency
 - Pagination support for API responses
-- Optimized for files with 50,000+ records
+- Available for files with 50,000+ records
 
 ## Error Handling
 
